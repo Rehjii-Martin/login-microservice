@@ -6,7 +6,7 @@ Three REST endpoints:
 - `POST /auth/logout` → `{ "message": "successfully logout" }`
 - Health: `GET /health` → `{ "status":"ok" }`
 
-## Runing the service (local)
+## Running the service (local)
 ```bash
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
