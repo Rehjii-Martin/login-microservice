@@ -14,6 +14,18 @@ export JWT_SECRET="super-secret-key"
 python app.py  # or: uvicorn app:app --port 8000 
 
 ```
+#### Quick Note about JWT_SECRET for Prod
+- For local development, you can use a test value like:
+```bash
+export JWT_SECRET="super-secret-key"
+```
+_****Do not use this in production.****_
+- For production, generate a strong random secret key (at least 32 characters) using:
+- Then set this as your JWT_SECRET before starting the service.
+
+```bash
+python -c "import secrets; print(secrets.token_hex(32))"
+```
 
 ## Running the service (live)
 **Dev**:
