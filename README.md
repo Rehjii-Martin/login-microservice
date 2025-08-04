@@ -6,6 +6,11 @@ Three REST endpoints:
 - `POST /auth/logout` → `{ "message": "successfully logout" }`
 - Health: `GET /health` → `{ "status":"ok" }`
 
+## Live Demo
+<video src="./demo.mp4" controls width="800">
+  Your browser does not support the video tag.
+</video>
+
 ## Running the service (local)
 ```bash
 python -m venv .venv && source .venv/bin/activate
