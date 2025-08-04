@@ -23,7 +23,9 @@ uvicorn app:app --reload --port 8000   # --reload = auto-restarts on code change
 
 **Prod**:
 ```bash
-uvicorn app:app --host 0.0.0.0 --port 8000  # run under a process manager or Docker
+uvicorn app:app --host 0.0.0.0 --port 8000  # Use in production or when deploying on a server 
+
+# Run under a process manager (e.g., systemd, supervisor) or in Docker to keep service running automatically if server reboots
 ```
 
 **_Note_**: Uvicorn is the ASGI (Async Server Gateway Interface) web server that runs the FastAPI app (it’s what listens on the port and serves requests).
