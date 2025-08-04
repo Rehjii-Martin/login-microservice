@@ -21,11 +21,10 @@ export JWT_SECRET="super-secret-key"
 ```
 _****Do not use this in production.****_
 - For production, generate a strong random secret key (at least 32 characters) using:
-- Then set this as your JWT_SECRET before starting the service.
-
 ```bash
 python -c "import secrets; print(secrets.token_hex(32))"
 ```
+- Then set this as your JWT_SECRET before starting the service.
 
 ## Running the service (live)
 **Dev**:
