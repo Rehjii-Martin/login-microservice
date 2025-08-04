@@ -6,13 +6,27 @@ Three REST endpoints:
 - `POST /auth/logout` → `{ "message": "successfully logout" }`
 - Health: `GET /health` → `{ "status":"ok" }`
 
-## Run (local)
+## Runing the service (local)
 ```bash
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 export JWT_SECRET="super-secret-key"
-python app.py  # or: uvicorn app:app --reload --port 8000
+python app.py  # or: uvicorn app:app --port 8000 
+
 ```
+
+## Running the service (live)
+**Dev**:
+```bash
+uvicorn app:app --reload --port 8000   # --reload = auto-restarts on code changes (dev only)
+```
+
+**Prod**:
+```bash
+uvicorn app:app --host 0.0.0.0 --port 8000  # run under a process manager or Docker
+```
+
+**_Note_**: Uvicorn is the ASGI (Async Server Gateway Interface) web server that runs the FastAPI app (it’s what listens on the port and serves requests).
 
 ## Test
 ```bash
